@@ -1,6 +1,6 @@
 import { Permissions } from 'expo';
 
-export const requestPermission = async permissionName => {
+export async function requestPermission(permissionName) {
   try {
     const { status } = await Permissions.getAsync(permissionName);
     if (status === 'granted') {
@@ -11,4 +11,4 @@ export const requestPermission = async permissionName => {
   } catch (error) {
     return false;
   }
-};
+}

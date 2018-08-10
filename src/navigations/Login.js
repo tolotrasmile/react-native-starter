@@ -6,9 +6,7 @@ const LoginNavigator = createStackNavigator(
   {
     TutorialScreen: {
       screen: TutorialScreen,
-      navigationOptions: () => ({
-        header: null
-      })
+      navigationOptions: () => ({ header: null })
     },
     LoginScreen: {
       screen: LoginScreen

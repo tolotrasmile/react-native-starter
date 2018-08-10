@@ -1,27 +1,26 @@
-import React from 'react';
-import { Text, View } from 'native-base';
-import { SafeAreaView, StyleSheet } from 'react-native';
-import Main from '../navigations/Main';
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Text } from 'native-base';
 
-export default class MainScreen extends React.Component {
-  static router = Main.router;
+export default class MainScreen extends Component {
+  static navigationOptions = {
+    title: 'Main'
+  };
 
   render() {
     return (
-      <SafeAreaView styles={styles.container}>
-        < View style={{ height: 200}}>
-          <Text>Hello</Text>
-        </View>
-        <Main navigation={this.props.navigation}/>
-      </SafeAreaView>
+      <View style={styles.container}>
+        <Text style={{ color: 'white' }}>Main Screen</Text>
+      </View>
     );
   }
 }
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red'
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#34464e'
   }
 });
